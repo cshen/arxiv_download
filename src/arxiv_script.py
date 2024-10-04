@@ -139,15 +139,21 @@ def bib(ax_id, add_to):
     article = retrieve.arxiv(ax_id)
     if article:
         bib_entry = article.bib()
-        print(f"\nHere is the requested BibTeX entry:\n\n{bib_entry}\n")
+        #
+        # CS: remove output info
+        # print(f"\nHere is the requested BibTeX entry:\n\n{bib_entry}\n")
         # TODO: again need to treat the 'None case'...
         if add_to in ("", None):
-            print(
-                "Note: to automatically add the BibTeX entry to a bib-file"
-                + "\neither set a default bib-file via 'axs"
-                + " --set-bib-file FILE PATH'"
-                + "\nor use 'axs bib AX_ID -a FILE PATH'."
-            )
+            print("")
+            #
+            # CS: [ 4-Oct-2024 23:27], remove output info for easier post-processing
+            #
+            # print(
+            #    "Note: to automatically add the BibTeX entry to a bib-file"
+            #    + "\neither set a default bib-file via 'axs"
+            #    + " --set-bib-file FILE PATH'"
+            #    + "\nor use 'axs bib AX_ID -a FILE PATH'."
+            # )
         elif not os.path.isfile(add_to) or os.path.splitext(add_to)[1] != ".bib":
             print("The given path does not point to a bib-file. Please try again.")
         else:
