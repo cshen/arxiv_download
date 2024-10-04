@@ -175,7 +175,7 @@ class Article:
             # CS:
            # "\n\tNote = {{\\href{{{4}}}{{arXiv:{5}}}}}\n}}"
            #
-            "\n\tNote = {{\\href{{{4}}}\n}},"
+            "\n\tNote = {{\\href{{{4}}}}},"
             "\n\teprint = {{{5}}}\n}}"
         ).format(article_key, self.authors, title, self.year, url, self.ax_id)
         return bib_entry
