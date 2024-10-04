@@ -45,9 +45,13 @@ def bib_title(string):
     special = [r'"', r"{", r"}"]
     split_string = string.split()
     split_string = [escape_special_chars(w, special) for w in split_string]
-    split_string = [
-        "{{{}}}".format(w) if re.search(caps, w) else w for w in split_string
-    ]
+
+    # CS: 4-Oct-2024 22:34
+    # Uppercase letters in title should not be escaped
+    # split_string = [
+    #    "{{{}}}".format(w) if re.search(caps, w) else w for w in split_string
+    # ]
+    #
     return " ".join(split_string)
 
 
