@@ -1,4 +1,12 @@
-# arXiv-script v0.2
+# arXiv-script v0.3
+
+Modified by CShen 4-Oct-2024 21:10, removing non-standard chars in the saved file name"
+
+Install:
+```
+ pipx install git+https://github.com/cshen/arxiv_download   
+```
+
 The [arXiv](www.arxiv.org) is the most important open-access repository for preprints in various sciences, e.g. Computer Science, Mathematics and Physics. Each preprint has its unique [arXiv identifier](https://arxiv.org/help/arxiv_identifier) (often called arXiv number). The _arXiv script_ (`axs`) is a minimal command line tool to interact with the preprint of an arXiv identifier:
 
 - `show` print its title, authors and abstract to the terminal.

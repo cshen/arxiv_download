@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "arxiv-script"
-version = "0.2.0"
-description = "Command line tool to handle arXiv articles and their BibTeX entries."
+version = "0.3.0"
+description = "Command line tool to handle arXiv articles and their BibTeX entries. Modified by CShen 4-Oct-2024 21:10, removing non-standard chars in the saved file name"
 authors = ["Florian Beck <flrn.beck@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/flrnbc/arxiv_script"
-repository = "https://github.com/flrnbc/arxiv_script"
+homepage = "https://github.com/cshen/arxiv_download"
+repository = "https://github.com/cshen/arxiv_download"
 keywords = ["arxiv", "python", "click"]
 include = [
 	"LICENSE", 
