@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="axs",
-    version="0.3",
+    version="0.3.1",
     py_modules=[
         "src.arxiv_script",
         "src.article",
