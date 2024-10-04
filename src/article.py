@@ -103,6 +103,22 @@ class Article:
         # more intelligent "cut-off" for title?
         contracted_title = "_".join(title_split[:15]) + "-" + self.year
         file_name = self.authors_contracted + "-" + contracted_title
+
+        # CS: [ 4-Oct-2024 20:28]
+        # Remove non-standard characters from the file_name
+        #
+        file_name.strip()
+        file_name.replace("   ", "_")
+        file_name.replace("  ", "_")
+        file_name.replace(" ", "_")
+        file_name.replace(":", "_")
+        file_name.replace(";", "_")
+        file_name.replace("?", "_")
+        file_name.replace("!", "_")
+        file_name.replace("^", "_")
+        file_name.replace("#", "_")
+
+
         file_path = "{}/{}.pdf".format(save_dir, file_name)
         # request url of pdf
         pdf_url = "https://arxiv.org/pdf/{}.pdf".format(self.ax_id)
