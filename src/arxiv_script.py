@@ -146,7 +146,7 @@ def bib(ax_id, add_to):
                 "Note: to automatically add the BibTeX entry to a bib-file"
                 + "\neither set a default bib-file via 'axs"
                 + " --set-bib-file FILE PATH'"
-                + "\nor use 'axs AX_ID bib -a FILE PATH'."
+                + "\nor use 'axs bib AX_ID -a FILE PATH'."
             )
         elif not os.path.isfile(add_to) or os.path.splitext(add_to)[1] != ".bib":
             print("The given path does not point to a bib-file. Please try again.")
@@ -158,4 +158,5 @@ def bib(ax_id, add_to):
             ):
                 with open(add_to, "a") as file:
                     file.write("{}".format(bib_entry))
+                    file.write("\n\n")
                     print("BibTeX entry successfully added.")
