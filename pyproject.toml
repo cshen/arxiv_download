@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "arxiv-script"
-version = "0.3.3"
+version = "0.3.4"
 description = "Command line tool to handle arXiv articles and their BibTeX entries. Modified by CShen 4-Oct-2024 21:10, removing non-standard chars in the saved file name"
 authors = ["Florian Beck <flrn.beck@gmail.com>"]
 license = "MIT"
