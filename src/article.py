@@ -172,6 +172,10 @@ class Article:
         bib_entry = (
             "@article{{{0},\n\tAuthor = {{{1}}},\n\tTitle = {{{2}}},"
             "\n\tYear = {{{3}}},"
-            "\n\tNote = {{\\href{{{4}}}{{arXiv:{5}}}}}\n}}"
+            # CS:
+           # "\n\tNote = {{\\href{{{4}}}{{arXiv:{5}}}}}\n}}"
+           #
+            "\n\tNote = {{\\href{{{4}}}\n}},"
+            "\n\teprint = {{{5}}}\n}}"
         ).format(article_key, self.authors, title, self.year, url, self.ax_id)
         return bib_entry
