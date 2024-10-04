@@ -140,8 +140,8 @@ def bib(ax_id, add_to):
     if article:
         bib_entry = article.bib()
         #
-        # CS: remove output info
-        # print(f"\nHere is the requested BibTeX entry:\n\n{bib_entry}\n")
+        # CS:
+        print(f"{bib_entry}\n")
         # TODO: again need to treat the 'None case'...
         if add_to in ("", None):
             print("")
