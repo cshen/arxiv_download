@@ -108,16 +108,15 @@ class Article:
         # Remove non-standard characters from the file_name
         #
         file_name.strip()
-        file_name.replace("   ", "_")
-        file_name.replace("  ", "_")
-        file_name.replace(" ", "_")
-        file_name.replace(":", "_")
-        file_name.replace(";", "_")
-        file_name.replace("?", "_")
-        file_name.replace("!", "_")
-        file_name.replace("^", "_")
-        file_name.replace("#", "_")
-
+        file_name=file_name.replace("   ", "_")
+        file_name=file_name.replace("  ", "_")
+        file_name=file_name.replace(" ", "_")
+        file_name=file_name.replace(":", "_")
+        file_name=file_name.replace(";", "_")
+        file_name=file_name.replace("?", "_")
+        file_name=file_name.replace("!", "_")
+        file_name=file_name.replace("^", "_")
+        file_name=file_name.replace("#", "_")
 
         file_path = "{}/{}.pdf".format(save_dir, file_name)
         # request url of pdf
