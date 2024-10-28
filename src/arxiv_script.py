@@ -97,7 +97,7 @@ def get(ax_id, open_file, directory):
         else:
             # download article and show the download path
             saved_path = os.path.abspath(article.download(save_dir=directory))
-            print("Article saved as {}.".format(saved_path))
+            print("Article saved as {} ".format(saved_path))
             if open_file:
                 opener = get_opener()
                 subprocess.call([f"{opener}", saved_path])
